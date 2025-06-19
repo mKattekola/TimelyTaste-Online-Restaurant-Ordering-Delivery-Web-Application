@@ -1,0 +1,110 @@
+body {
+  /* margin: 0;
+   border: 0;*/
+   font-family: Arial, Helvetica, sans-serif;
+   background-image: url("hp.jpg");
+ }
+ 
+ 
+ .text {
+   width: 100%;
+   height: 100vh;
+   background: url(bg4.jpg) ;
+   
+   color: brown;
+   text-align: center;
+   font-size: xx-large;
+ }
+ .h2 {
+   text-align: right;
+ }
+ .background {
+   height: auto;
+   width: auto;
+ }
+
+.stars {
+   float: right;
+   height: 150px;
+}
+
+img {
+   float: left;
+   margin: 0 0 20px 60px;
+ }
+ html,body{
+  overflow-x: hidden;
+  height: 100%;
+}   
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  background-image: url("background.jpg");
+}
+.header{
+  background: black;
+  width:100%;
+  height: 60px;
+  position: fixed;
+  z-index: 10;
+}
+.sidebar-toogle{
+  width :22px;
+  height: 22px;
+  position:absolute;
+  z-index: 0;
+  left:15px;
+  top:22px;
+  cursor: pointer;
+  background: black;
+}
+
+
+#sidebar{
+height: 100%;
+position: fixed;
+left:0;
+top:0;
+width:250px;
+margin-top: 60px;
+background: black;
+transform: translateX(-250px);
+transition: transform 250ms ease-in-out;
+}
+
+#opensidebarMenu:checked ~ #sidebar{
+  transform: translateX(0px);
+
+}
+.menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li{
+  color:white;
+  border-bottom: 1px solid white;
+}
+.menu li a{
+  color:white;
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+}
+footer{
+  bottom: 0;
+  position: absolute;
+  background: black;
+  color: white;
+  padding: 9px 20px;
+  left: 0;
+  right: 0;    
+}
+
+
+
+.center{
+  text-align: center;
+}

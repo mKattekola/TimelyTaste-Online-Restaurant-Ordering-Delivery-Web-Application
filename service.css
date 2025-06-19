@@ -1,0 +1,190 @@
+h1 {
+	font-family: sans-serif;
+	text-align: center;
+	color: white;
+	margin-top: 80px;
+}
+
+html,body{
+    overflow-x: hidden;
+    height: 100%;
+}   
+body {
+	background-image: url(img1.jpg);
+	margin: 0;
+	padding: 0;
+}
+.header{
+    background: black;
+    width:100%;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+}
+.sidebar-toogle{
+    width :22px;
+    height: 22px;
+    position:absolute;
+    z-index: 0;
+    left:15px;
+    top:22px;
+    cursor: pointer;
+    background: white;
+}
+
+
+#sidebar{
+ height: 100%;
+ position: fixed;
+ left:0;
+ top:0;
+ width:250px;
+ margin-top: 60px;
+ background: black;
+ transform: translateX(-250px);
+ transition: transform 250ms ease-in-out;
+}
+
+#opensidebarMenu:checked ~ #sidebar{
+    transform: translateX(0px);
+
+}
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu li{
+    color:white;
+    border-bottom: 1px solid white;
+}
+.menu li a{
+    color:white;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	display: block;
+	
+}
+
+#food {
+	font-family: helvetica;
+	font-size: 20pt;
+	color: white;
+	margin-top: 10px;
+	text-align: left;
+}
+
+#City {
+	font-family: helvetica;
+	font-size: 20pt;
+	color: white;
+	margin-top: 90px;
+	margin-bottom: 50px;
+	text-align: left;
+}
+
+.main {
+	margin: 0px 300px;
+	text-align: center;
+}
+
+.card {
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	height: 250px;
+	width: 250px;
+	border-radius: 10px;
+	align-content: center;
+	transition: transform .2s;
+	margin-top: -60px;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	transform: scale(1.1);
+}
+
+.card-img {
+	height: 200px;
+	width: 250px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.card-text {
+	margin-top: 5px;
+	text-align: center;
+	font-family: verdana;
+	font-size: 14pt;
+}
+
+.column {
+	float: left;
+	margin: 0 25px;
+}
+
+.row {
+	margin-top: 150px;
+}
+
+ul {
+	float: left;
+	margin-top: -20px;
+	margin-left: 30px;
+}
+
+li {
+	text-align: left;
+	font-size: 1.6rem;
+	color: white;
+	list-style-type: circle;
+}
+
+.payment-text {
+	font-family: helvetica;
+	font-size: 20pt;
+	color: white;
+	text-align: left;
+}
+
+.payment-img {
+	width: 150px;
+	height: 100px;
+	margin-left: 10px;
+}
+
+.delivery-text {
+	font-family: helvetica;
+	font-size: 20pt;
+	color: white;
+	text-align: left;
+}
+
+.delivery-img {
+	width: 200px;
+	height: 200px;
+}
+
+#offer {
+	color: red;
+}
+footer{
+	bottom: 0;
+	position: absolute;
+	background: black;
+	color: white;
+	padding: 9px 20px;
+	left: 0;
+	right: 0;    
+  }
+  
+  
+  .center{
+	text-align: center;
+  }

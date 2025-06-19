@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.firstpage{
+  background:url("img4.jpg") left top repeat-x,url("wooden.jpg") left bottom;
+ 
+}
+.container {
+    padding: 16px;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("img1.jpg");
+    position: absolute;
+  }
+  .form{
+      width: 380px;
+      height: 580px;
+      position:relative;
+      margin: 6% auto;
+      background-image:url("img3.jpg");
+      padding: 5px;
+  }
+  .p1{
+    font-size: 250%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+input[type=text], input[type=password],input[type=number],input[type=email] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    text-align: center;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus,input[type=textarea]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  hr{
+    color: black;
+  }
+  .label{
+      color: black;
+      align-items: center;
+  }
+  p{
+      color:black;
+      text-align: center;
+  }
+  .head_1{
+    text-align: center;
+    color: white;
+    font-size: 300%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  button {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  .login{
+   float: right;
+   width:10%;
+   color:black;
+   background-color:white;
+  }
+  .sign_up{
+    float: right;
+   width:10%;
+   color:black;
+   background-color:burlywood;
+  }
+  button:hover {
+    opacity:1;
+  }
+  
+  .cancelbtn{
+      float:left;
+      width: 50%;
+      background-color: #f44336;
+  }
+  .signupbtn{
+      float: right;
+      width: 50%;
+      background-color: green;
+  }
+  .loginbtn{
+    float: right;
+      width: 50%;
+      background-color: green;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  h1{
+      color: black;
+      text-align: center;
+  }
+  img{
+    height:200px;
+    width:200px;
+  }
+  .fig{
+    font-size: 150%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .column{
+    float:left;
+    width: 200px;
+    padding: 5px;
+
+  }
+  .row::after{
+    content:"";
+    clear:both;
+    display: table;
+    
+  }
+
+footer{
+    bottom: 0;
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    left: 0;
+    right: 0;    
+}
+
+
+.center{
+  text-align: center;
+}

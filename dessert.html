@@ -1,0 +1,105 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="utf-8" />  
+    <title>Dessert-Order</title> 
+    <link rel="stylesheet" href="fooditems.css"> 
+   
+</head>  
+<body> 
+    <form method="GET" action="home.html">
+        <button type="submit" class="back">Back</button>
+    </form> 
+    <div class="slidercontainer">  
+        <div class="showSlide fade">  
+            <img src="Choco Brownie.jpeg" />  
+            <div class="content">Choco Brownie</div> 
+            <label for="text" class="input">Price:Rs 369(click the checkbox to purchase)</label>
+            <input type="checkbox" id="Choco Brownie"> 
+        </div>  
+        <div class="showSlide fade">  
+            <img src="Strawberry cheese Cake.jpeg" />  
+            <div class="content">Strawberry cheese Cake</div> 
+            <label for="text" class="input">Price:Rs 369(click the checkbox to purchase)</label>
+            <input type="checkbox" id="StrawberryCake">  
+        </div>  
+ 
+        <div class="showSlide fade">  
+            <img src="StrawberrySmoothie.jpeg" />  
+            <div class="content">Strawberry Smoothie</div>  
+            <label for="text" class="input">Price:Rs 269(click the checkbox to purchase)</label>
+            <input type="checkbox" id="StrawberrySmoothie" >  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="Butterscotch ice cream.jpeg" />  
+            <div class="content">Butterscotch Ice Cream</div> 
+            <label for="text" class="input">Price:Rs 319(click the checkbox to purchase)</label>
+            <input type="checkbox" id="Butterscotch">  
+            
+
+        </div>  
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="nextSlide(-1)">❮</a>  
+        <a class="right" onclick="nextSlide(1)">❯</a>  
+    </div>  
+    <form class="form1"><br>
+        <input type="button" onclick="payment()" value="Bill">
+        <br><br>
+        <input type="text" id="order" size="15">
+    </form>
+    <form method="GET" action="payment.html">
+        <button type="submit" class="pay">Payment</button>
+      </form> 
+
+      <footer>
+        <div class="center">
+            Copyright &copy; www.TimelyTaste.com. All rights reserved!
+        </div>
+</footer> 
+
+     
+    <script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+
+    
+   function payment(){
+    var pay=0;
+    if(document.getElementById("Butterscotch").checked==true){
+      pay=pay+319;
+    }
+    if(document.getElementById("StrawberrySmoothie").checked==true){
+      pay=pay+269;
+    }
+    if(document.getElementById("StrawberryCake").checked==true){
+      pay=pay+369;
+    }
+    if(document.getElementById("Choco Brownie").checked==true){
+      pay=pay+319;
+    }
+    
+    document.getElementById("order").value="         Bill:"+pay;
+}
+    </script>  
+  
+</body> 
+</html>   

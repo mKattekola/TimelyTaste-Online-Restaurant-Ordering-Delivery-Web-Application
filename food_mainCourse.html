@@ -1,0 +1,112 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="utf-8" />  
+    <title>Main course-Order</title>  
+    <link rel="stylesheet" href="fooditems.css">
+    
+</head>  
+<body> 
+    <form method="GET" action="home.html">
+        <button type="submit" class="back">Back</button>
+      </form>  
+    <div class="slidercontainer">  
+        <div class="showSlide fade">  
+            <img src="BabyCorn Masala.jpeg" />  
+            <div class="content">Baby Corn Masala</div> 
+            <label for="text" class="input">Price:Rs 229(click the checkbox to purchase)</label>
+            <input type="checkbox" id="BabyCorn Masala"> 
+        </div>  
+        <div class="showSlide fade">  
+            <img src="Panner Butter Masala.jpeg" />  
+            <div class="content">Panner Butter Masala</div> 
+            <label for="text" class="input">Price:Rs 259(click the checkbox to purchase)</label>
+            <input type="checkbox" id="Panner Butter Masala">  
+        </div>  
+ 
+        <div class="showSlide fade">  
+            <img src="Biryani.jpeg" />  
+            <div class="content">Biryani</div>  
+            <label for="text" class="input">Price:Rs 300(click the checkbox to purchase)</label>
+            <input type="checkbox" id="Biryani" >  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="chinese.jpg" />  
+            <div class="content">Chow Mein</div> 
+            <label for="text" class="input">Price:Rs 200(click the checkbox to purchase)</label>
+            <input type="checkbox" id="ChowMein" >  
+
+        </div>  
+        <div class="showSlide fade">  
+            <img src="pizza.jpeg" />  
+            <div class="content">Pizza</div> 
+            <label for="text" class="input">Price:Rs 300(click the checkbox to purchase)</label>
+            <input type="checkbox" id="pizza" >  
+
+        </div>  
+
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="nextSlide(-1)">❮</a>  
+        <a class="right" onclick="nextSlide(1)">❯</a>  
+       </div>  
+       <form class="form1"><br>
+        <input type="button" onclick="payment()" value="Bill">
+        <br><br>
+        <input type="text" id="order" size="15">
+    </form>
+          <form method="GET" action="payment.html">
+            <button type="submit" class="pay">Payment</button>
+          </form> 
+          <footer>
+            <div class="center">
+                Copyright &copy; www.TimelyTaste.com. All rights reserved!
+            </div>
+    </footer> 
+    <script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+
+    
+        function payment(){
+    var pay=0;
+    if(document.getElementById("BabyCorn Masala").checked==true){
+      pay=pay+299;
+    }
+    if(document.getElementById("Panner Butter Masala").checked==true){
+      pay=pay+259;
+    }
+    if(document.getElementById("Biryani").checked==true){
+      pay=pay+300;
+    }
+    if(document.getElementById("ChowMein").checked==true){
+      pay=pay+200;
+    }
+    if(document.getElementById("pizza").checked==true){
+      pay=pay+309;
+    }
+    
+    document.getElementById("order").value="         Bill:"+pay;
+}
+    </script>  
+  
+</body>  
+</html>   
